@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: addresses
+#
+#  id         :integer          not null, primary key
+#  street     :string
+#  city       :string
+#  zip        :integer
+#  country    :string
+#  state      :string
+#  lat        :float
+#  lng        :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  street: MyString
+  city: MyString
+  zip: 1
+  country: MyString
+  state: MyString
+  lat: 1.5
+  lng: 1.5
+
+two:
+  street: MyString
+  city: MyString
+  zip: 1
+  country: MyString
+  state: MyString
+  lat: 1.5
+  lng: 1.5
