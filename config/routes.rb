@@ -9,9 +9,6 @@ Rails.application.routes.draw do
     namespace :api do
       namespace :v1 do
         resources :transactions, only: %i(index create update destroy)
-        resources :users, shallow: true do
-          resources :transactions
-        end
       end
     end
   end

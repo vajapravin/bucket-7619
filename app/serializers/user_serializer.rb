@@ -33,6 +33,6 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :identifier
+  attributes :id, :email, :identifier
   belongs_to :profile
 end

@@ -16,8 +16,4 @@ class Profile < ApplicationRecord
   belongs_to :address
 
   accepts_nested_attributes_for :address
-
-  scope :where_by_identifier, lambda { |identifier|
-    joins(:uid).where(uids: {identifier: identifier})
-  }
 end
