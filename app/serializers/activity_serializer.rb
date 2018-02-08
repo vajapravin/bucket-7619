@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: transactions
+# Table name: activities
 #
 #  id              :integer          not null, primary key
 #  user_id         :integer
@@ -11,12 +11,7 @@
 #  invocation_id   :integer
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  user: one
-  event_type: 1
-
-two:
-  user: two
-  event_type: 1
+class ActivitySerializer < ActiveModel::Serializer
+  attributes :identifier, :event_type, :invocation_id, :invocation_type
+  belongs_to :invocation, key: :invocation_attributes
+end

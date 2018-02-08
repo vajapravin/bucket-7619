@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
     namespace :api do
       namespace :v1 do
-        resources :transactions, only: %i(index create update destroy)
+        resources :activities, only: %i(index create)
+
+        get 'profile' => 'misc#profile'
       end
     end
   end

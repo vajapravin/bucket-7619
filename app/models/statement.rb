@@ -1,14 +1,14 @@
 # == Schema Information
 #
-# Table name: transactions
+# Table name: statements
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  event_type :integer
+#  start_date :date
+#  end_date   :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class TransactionSerializer < ActiveModel::Serializer
-  attributes :id
+class Statement < ApplicationRecord
+  has_one :activity, as: :invocation
 end

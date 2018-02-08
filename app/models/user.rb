@@ -30,6 +30,7 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  profile_id             :integer
+#  amount                 :float            default(0.0)
 #
 
 class User < ApplicationRecord
@@ -43,4 +44,11 @@ class User < ApplicationRecord
 
   belongs_to :profile, optional: true
   accepts_nested_attributes_for :profile
+
+  has_many :activities
+  accepts_nested_attributes_for :activities
+
+  has_many :deposit_activities, -> { order 'id' }, through: :activities, source: 'invocation', source_type: 'Deposit'
+  has_many :withdraw_activities, -> { order 'id' }, through: :activities, source: 'invocation', source_type: 'Withdraw'
+  has_many :statement_activities, -> { order 'id' }, through: :activities, source: 'invocation', source_type: 'Statement'
 end

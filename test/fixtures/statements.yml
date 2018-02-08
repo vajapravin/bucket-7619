@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: statements
+#
+#  id         :integer          not null, primary key
+#  start_date :date
+#  end_date   :date
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2018-02-09
+  end_date: 2018-02-09
+
+two:
+  start_date: 2018-02-09
+  end_date: 2018-02-09

@@ -30,9 +30,10 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  profile_id             :integer
+#  amount                 :float            default(0.0)
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :identifier
+  attributes :email, :identifier, :amount
   belongs_to :profile
 end

@@ -32,3 +32,7 @@
 en:
   error_message:
     invalid_token: 'Access Denied: Invalid or expired token'
+    insufficient_amount: 'Insufficient amount'
+  success_message:
+    deposit_success: 'Deposit success'
+    withdraw_success: 'Withdraw success'
