@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+List of APIs
 
-Things you may want to cover:
+Users
+  Sign Up
+  Confirm User Registration
+  Sign In
+  Update Existing User
 
-* Ruby version
+Activities
+  Get activities
+  withdraw amount
+  deposit amount
 
-* System dependencies
+Customers
+  Create
+  Get customers
+  Update customers
 
-* Configuration
+How to test APIs? - load Ally.postman_collection.json to Postman
 
-* Database creation
+Create Postman Environment settings as follow:
+  BASE_URL: http://localhost:3000/api/v1
+  AUTH_TOKEN: Bearer anything
 
-* Database initialization
+Signup Account (check log to collect confirmation token)
+Confirm user registration (use confirmationtoken to confirm)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Now you can use rest apis, please check headers
+  `Authorization: {{AUTH_TOKEN}}`
+  `Content-Type: application/json`

@@ -1,0 +1,409 @@
+{
+	"id": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+	"name": "Ally",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"name": "Users",
+			"description": "",
+			"order": [
+				"8fcda61b-0246-ad84-c991-ee64ae7a1e64",
+				"8b8f276b-7a41-0e14-f7b0-4db00296fd06",
+				"bdbe1063-f933-9a54-dfac-6ab3cca14f3f",
+				"eb8e5f85-c9d7-93d6-6b3c-01e4695bc528",
+				"25363a31-941d-d095-9cfa-563d2736958e"
+			],
+			"owner": "313080",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"folders_order": []
+		},
+		{
+			"name": "activities",
+			"description": "",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"order": [
+				"145d04fd-295e-29cd-6f80-07e738e9ad51",
+				"471cc2c9-b51e-ac43-8df4-1f1ebba6edca",
+				"814f47a7-bee7-277a-02d9-4e25a987ff58"
+			],
+			"owner": "313080",
+			"folders_order": [],
+			"id": "4f6dbde4-3384-38c0-206b-b519c84a2537"
+		},
+		{
+			"name": "customers",
+			"description": "",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"order": [
+				"03e752e3-8276-0fd7-48fb-8039e1857fd7",
+				"df07a799-3506-795c-b869-0d9f7ebe5a03",
+				"8b7012d0-b1a2-06b9-03ae-363026d4067f"
+			],
+			"owner": "313080",
+			"folders_order": [],
+			"id": "aefc81b5-6e83-69b7-a468-78e1f26a3ad9"
+		}
+	],
+	"folders_order": [
+		"f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+		"4f6dbde4-3384-38c0-206b-b519c84a2537",
+		"aefc81b5-6e83-69b7-a468-78e1f26a3ad9"
+	],
+	"timestamp": 1517929510581,
+	"owner": "313080",
+	"public": false,
+	"requests": [
+		{
+			"id": "03e752e3-8276-0fd7-48fb-8039e1857fd7",
+			"headers": "Content-Type: application/json\nAuthorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/customers.json",
+			"folder": "aefc81b5-6e83-69b7-a468-78e1f26a3ad9",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518163137524,
+			"name": "Create customer",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"user\": {\n        \"email\":\"suresh.varma@gmail.com\",\n        \"password\":\"password\",\n        \"roles_attributes\":[\n        \t{\"name\":\"admin\"}\n        ],\n        \"profile_attributes\": {\n          \"first_name\":\"Suresh\",\n          \"last_name\":\"Varma\",\n          \"address_attributes\": {\n            \"street\":\"#16, Bhuvaneshwari Nagar\",\n            \"city\":\"Bangalore\",\n            \"zip\":560093,\n            \"country\":\"India\",\n            \"state\":\"Karnataka\",\n            \"lat\":\"\",\n            \"lng\":\"\"\n          }\n        }\n    }\n}"
+		},
+		{
+			"id": "145d04fd-295e-29cd-6f80-07e738e9ad51",
+			"headers": "Authorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/activities.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518131296950,
+			"name": "Get activities",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
+			"id": "25363a31-941d-d095-9cfa-563d2736958e",
+			"headers": "Authorization: {{AUTH_TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/users.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1517949785027,
+			"name": "Update existing user",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n\t\"user\": {\n        \"email\":\"vajapravin23@gmail.com\",\n        \"password\":\"password\",\n        \"current_password\":\"password12\",\n        \"profile_attributes\": {\n        \t\"first_name\":\"Pravin123\",\n        \t\"last_name\":\"Vaja\",\n        \t\"address_attributes\": {\n        \t\t\"street\":\"#16, Bhuvaneshwari Nagar\",\n        \t\t\"city\":\"Bangalore\",\n        \t\t\"zip\":560093,\n        \t\t\"country\":\"India\",\n        \t\t\"state\":\"Karnataka\",\n        \t\t\"lat\":\"\",\n        \t\t\"lng\":\"\"\n        \t}\n        }\n    }\n}"
+		},
+		{
+			"id": "471cc2c9-b51e-ac43-8df4-1f1ebba6edca",
+			"headers": "Authorization: {{AUTH_TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/activities.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518132482300,
+			"name": "Withdraw Amount",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"activity\": {  \n        \"event_type\":1,\n        \"invocation_attributes\":{\n        \t\"amount\":10000\n        }\n    }\n}"
+		},
+		{
+			"id": "814f47a7-bee7-277a-02d9-4e25a987ff58",
+			"headers": "Authorization: {{AUTH_TOKEN}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/activities.json",
+			"folder": "4f6dbde4-3384-38c0-206b-b519c84a2537",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518132475247,
+			"name": "Deposit Amount",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"activity\": {  \n        \"event_type\":0,\n        \"invocation_attributes\":{\n        \t\"amount\":10000\n        }\n    }\n}"
+		},
+		{
+			"id": "8b7012d0-b1a2-06b9-03ae-363026d4067f",
+			"headers": "Content-Type: application/json\nAuthorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/customers/bQNfAld6yresta1Oni1Lfwtt.json",
+			"folder": "aefc81b5-6e83-69b7-a468-78e1f26a3ad9",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518185063661,
+			"name": "Update customer",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"user\": {\n        \"email\":\"suresh.varma@gmail.com\",\n        \"password\":\"password\",\n        \"roles_attributes\":[{\n            \"name\": \"employee\"\n        }],\n        \"profile_attributes\": {\n          \"first_name\":\"Suresh\",\n          \"last_name\":\"Varma\",\n          \"address_attributes\": {\n            \"street\":\"#16, Bhuvaneshwari Nagar\",\n            \"city\":\"Bangalore\",\n            \"zip\":560093,\n            \"country\":\"India\",\n            \"state\":\"Karnataka\",\n            \"lat\":\"\",\n            \"lng\":\"\"\n          }\n        }\n    }\n}"
+		},
+		{
+			"id": "8b8f276b-7a41-0e14-f7b0-4db00296fd06",
+			"headers": "",
+			"headerData": [],
+			"url": "{{BASE_URL}}/profile.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518157648843,
+			"name": "User Profile",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
+			"id": "8fcda61b-0246-ad84-c991-ee64ae7a1e64",
+			"headers": "",
+			"headerData": [],
+			"url": "{{BASE_URL}}/users/confirmation.json?confirmation_token=XJfqDYUpkhC7mUhPgkxM",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [
+				{
+					"key": "confirmation_token",
+					"value": "XJfqDYUpkhC7mUhPgkxM",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518132871735,
+			"name": "Confirm user registration",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
+			"id": "bdbe1063-f933-9a54-dfac-6ab3cca14f3f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/users/sign_in.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"USER_ID\", jsonData.id);\n\npostman.setEnvironmentVariable(\"AUTH_TOKEN\", \"Bearer \" + responseHeaders[\"Ally-Auth-Token\"]);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518131109359,
+			"name": "Sign in",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"user\": {  \n        \"email\":\"pravin.vaja@gmail.com\",\n        \"password\":\"password\"\n    }\n}"
+		},
+		{
+			"id": "df07a799-3506-795c-b869-0d9f7ebe5a03",
+			"headers": "Authorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/customers.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518151570156,
+			"name": "Get customers",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
+			"id": "eb8e5f85-c9d7-93d6-6b3c-01e4695bc528",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/users.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518132858511,
+			"name": "Sign up",
+			"description": "Signs in a user",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": [],
+			"rawModeData": "{  \n    \"user\": {  \n        \"email\":\"vajapravin23@gmail.com\",\n        \"password\":\"password\",\n        \"profile_attributes\": {\n        \t\"first_name\":\"Pravin\",\n        \t\"last_name\":\"Vaja\",\n        \t\"address_attributes\": {\n        \t\t\"street\":\"#16, Bhuvaneshwari Nagar\",\n        \t\t\"city\":\"Bangalore\",\n        \t\t\"zip\":560093,\n        \t\t\"country\":\"India\",\n        \t\t\"state\":\"Karnataka\",\n        \t\t\"lat\":\"\",\n        \t\t\"lng\":\"\"\n        \t}\n        }\n    }\n}"
+		}
+	]
+}

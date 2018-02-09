@@ -35,10 +35,7 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :identifier, :amount, :roles
+  attributes :email, :identifier, :amount
   belongs_to :profile
-
-  def roles
-    object.roles.pluck(:name).map(&:titlecase) unless object.roles.blank?
-  end
+  has_many :roles
 end

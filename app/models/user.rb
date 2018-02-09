@@ -43,6 +43,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :invitable
   include Identifiable, UserHelper
   after_create :assign_default_role
+  validate :ancestor_role
 
   alias customers children
 
@@ -53,6 +54,7 @@ class User < ApplicationRecord
 
   has_many :activities
   accepts_nested_attributes_for :activities
+  accepts_nested_attributes_for :roles, allow_destroy: true
 
   has_many :deposit_activities, -> { order 'id' }, through: :activities, source: 'invocation', source_type: 'Deposit'
   has_many :withdraw_activities, -> { order 'id' }, through: :activities, source: 'invocation', source_type: 'Withdraw'
@@ -62,5 +64,12 @@ class User < ApplicationRecord
 
   def assign_default_role
     self.add_role(:customer) if self.roles.blank?
+  end
+
+  def ancestor_role
+    assigned_roles = roles.pluck(:name)
+    if assigned_roles.include?('admin') && parent.has_role?('manager')
+      errors.add(:base, I18n.t('role.access_denied'))
+    end
   end
 end

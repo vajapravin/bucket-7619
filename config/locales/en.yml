@@ -41,4 +41,7 @@ en:
     deposit_success: 'Deposit success'
     withdraw_success: 'Withdraw success'
   customer:
-    successfully_registered: 'Customer has been successfully registered!'
+    successfully_registered: 'Successfully registered!'
+    successfully_updated: 'Successfully updated!'
+  role:
+    access_denied: 'Role restrictions!'
