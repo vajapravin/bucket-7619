@@ -31,9 +31,14 @@
 #  updated_at             :datetime         not null
 #  profile_id             :integer
 #  amount                 :float            default(0.0)
+#  ancestry               :string
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :identifier, :amount
+  attributes :email, :identifier, :amount, :roles
   belongs_to :profile
+
+  def roles
+    object.roles.pluck(:name).map(&:titlecase) unless object.roles.blank?
+  end
 end

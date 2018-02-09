@@ -33,6 +33,12 @@ en:
   error_message:
     invalid_token: 'Access Denied: Invalid or expired token'
     insufficient_amount: 'Insufficient amount'
+    restricted_access: 'Restricted access'
+  exception_message:
+    not_found: 'Not found'
+    something_went_wrong: 'Internal server errror!'
   success_message:
     deposit_success: 'Deposit success'
     withdraw_success: 'Withdraw success'
+  customer:
+    successfully_registered: 'Customer has been successfully registered!'

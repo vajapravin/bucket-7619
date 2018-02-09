@@ -40,6 +40,6 @@ module AllyApi
     end
 
     config.eager_load_paths << Rails.root.join('lib')
-
+    config.eager_load_paths << Rails.root.join('app/exceptions')
   end
 end

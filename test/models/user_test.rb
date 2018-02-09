@@ -31,6 +31,7 @@
 #  updated_at             :datetime         not null
 #  profile_id             :integer
 #  amount                 :float            default(0.0)
+#  ancestry               :string
 #
 
 require 'test_helper'

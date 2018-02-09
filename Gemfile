@@ -24,6 +24,8 @@ gem 'jwt'
 gem 'cronex'
 gem 'pg_search'
 gem 'dotenv'
+gem 'rolify'
+gem 'ancestry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
