@@ -11,6 +11,7 @@
 			"order": [
 				"8fcda61b-0246-ad84-c991-ee64ae7a1e64",
 				"8b8f276b-7a41-0e14-f7b0-4db00296fd06",
+				"b024985f-6fc9-f9e5-73ab-3516b4321cde",
 				"bdbe1063-f933-9a54-dfac-6ab3cca14f3f",
 				"eb8e5f85-c9d7-93d6-6b3c-01e4695bc528",
 				"25363a31-941d-d095-9cfa-563d2736958e"
@@ -18,6 +19,18 @@
 			"owner": "313080",
 			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
 			"folders_order": []
+		},
+		{
+			"name": "Utils",
+			"description": "",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"order": [
+				"73de6c1b-b2b8-472c-9075-449245eee0c3",
+				"f92c01c0-1ea0-6c1f-d3ff-e8055ea71a85"
+			],
+			"owner": "313080",
+			"folders_order": [],
+			"id": "18de994b-2a6e-8f22-c477-3203df34df7a"
 		},
 		{
 			"name": "activities",
@@ -49,7 +62,8 @@
 	"folders_order": [
 		"f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
 		"4f6dbde4-3384-38c0-206b-b519c84a2537",
-		"aefc81b5-6e83-69b7-a468-78e1f26a3ad9"
+		"aefc81b5-6e83-69b7-a468-78e1f26a3ad9",
+		"18de994b-2a6e-8f22-c477-3203df34df7a"
 	],
 	"timestamp": 1517929510581,
 	"owner": "313080",
@@ -193,6 +207,35 @@
 			"rawModeData": "{  \n    \"activity\": {  \n        \"event_type\":1,\n        \"invocation_attributes\":{\n        \t\"amount\":10000\n        }\n    }\n}"
 		},
 		{
+			"id": "73de6c1b-b2b8-472c-9075-449245eee0c3",
+			"headers": "Authorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/statistics.json",
+			"folder": "18de994b-2a6e-8f22-c477-3203df34df7a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518192733005,
+			"name": "Statistics",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
 			"id": "814f47a7-bee7-277a-02d9-4e25a987ff58",
 			"headers": "Authorization: {{AUTH_TOKEN}}\nContent-Type: application/json\n",
 			"headerData": [
@@ -266,8 +309,15 @@
 		},
 		{
 			"id": "8b8f276b-7a41-0e14-f7b0-4db00296fd06",
-			"headers": "",
-			"headerData": [],
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImVtYWlsIjoicHJhdmluLnZhamExMjdAZ21haWwuY29tIn0sImlzcyI6ImFsbHkudmFqYXByYXZpbi5jb20iLCJleHAiOjE1MTkxMzc4NzMsImlhdCI6MTUxOTA1MTQ3M30.UC7oqjlpTYIVR0TRZsx0WrvFHnImtNyK2yxxx6o7BSQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImVtYWlsIjoicHJhdmluLnZhamExMjdAZ21haWwuY29tIn0sImlzcyI6ImFsbHkudmFqYXByYXZpbi5jb20iLCJleHAiOjE1MTkxMzc4NzMsImlhdCI6MTUxOTA1MTQ3M30.UC7oqjlpTYIVR0TRZsx0WrvFHnImtNyK2yxxx6o7BSQ",
+					"description": "",
+					"enabled": true
+				}
+			],
 			"url": "{{BASE_URL}}/profile.json",
 			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
 			"queryParams": [],
@@ -280,7 +330,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1518157648843,
+			"time": 1519108355364,
 			"name": "User Profile",
 			"description": "Confirms a user based on the key",
 			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
@@ -290,12 +340,12 @@
 			"id": "8fcda61b-0246-ad84-c991-ee64ae7a1e64",
 			"headers": "",
 			"headerData": [],
-			"url": "{{BASE_URL}}/users/confirmation.json?confirmation_token=XJfqDYUpkhC7mUhPgkxM",
+			"url": "{{BASE_URL}}/users/confirmation.json?confirmation_token=PubnGu7mVWGqZiA1ESLj",
 			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
 			"queryParams": [
 				{
 					"key": "confirmation_token",
-					"value": "XJfqDYUpkhC7mUhPgkxM",
+					"value": "PubnGu7mVWGqZiA1ESLj",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -310,8 +360,37 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1518132871735,
+			"time": 1519357432161,
 			"name": "Confirm user registration",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
+		},
+		{
+			"id": "b024985f-6fc9-f9e5-73ab-3516b4321cde",
+			"headers": "Authorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/users/validate_token.json",
+			"folder": "f1fe3dd8-62f4-2d8e-0629-193b7efe1a93",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1519101453269,
+			"name": "Validate token",
 			"description": "Confirms a user based on the key",
 			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
 			"responses": []
@@ -339,12 +418,12 @@
 			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"USER_ID\", jsonData.id);\n\npostman.setEnvironmentVariable(\"AUTH_TOKEN\", \"Bearer \" + responseHeaders[\"Ally-Auth-Token\"]);",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1518131109359,
+			"time": 1519357482125,
 			"name": "Sign in",
 			"description": "Signs in a user",
 			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
 			"responses": [],
-			"rawModeData": "{  \n    \"user\": {  \n        \"email\":\"pravin.vaja@gmail.com\",\n        \"password\":\"password\"\n    }\n}"
+			"rawModeData": "{  \n    \"user\": {  \n        \"email\":\"pravin.vaja@gmail.com\",\n        \"password\":\"password123\"\n    }\n}"
 		},
 		{
 			"id": "df07a799-3506-795c-b869-0d9f7ebe5a03",
@@ -404,6 +483,35 @@
 			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
 			"responses": [],
 			"rawModeData": "{  \n    \"user\": {  \n        \"email\":\"vajapravin23@gmail.com\",\n        \"password\":\"password\",\n        \"profile_attributes\": {\n        \t\"first_name\":\"Pravin\",\n        \t\"last_name\":\"Vaja\",\n        \t\"address_attributes\": {\n        \t\t\"street\":\"#16, Bhuvaneshwari Nagar\",\n        \t\t\"city\":\"Bangalore\",\n        \t\t\"zip\":560093,\n        \t\t\"country\":\"India\",\n        \t\t\"state\":\"Karnataka\",\n        \t\t\"lat\":\"\",\n        \t\t\"lng\":\"\"\n        \t}\n        }\n    }\n}"
+		},
+		{
+			"id": "f92c01c0-1ea0-6c1f-d3ff-e8055ea71a85",
+			"headers": "Authorization: {{AUTH_TOKEN}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{AUTH_TOKEN}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}/executives.json",
+			"folder": "18de994b-2a6e-8f22-c477-3203df34df7a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1519343099873,
+			"name": "Get executives",
+			"description": "Confirms a user based on the key",
+			"collectionId": "e6897bdc-44ea-fec5-88d4-7320ce772791",
+			"responses": []
 		}
 	]
 }
