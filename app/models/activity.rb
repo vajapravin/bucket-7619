@@ -15,6 +15,7 @@ class Activity < ApplicationRecord
   include Identifiable, ActivityValidators
   belongs_to :user
   belongs_to :invocation, polymorphic: true
+  before_create :validate_active
 
   attr_accessor :invocation_attributes
 
@@ -34,5 +35,11 @@ class Activity < ApplicationRecord
 
   def withdraw_amount
     withdraw? ? amount : nil
+  end
+
+  private
+
+  def validate_active
+    errors.add(:base, 'User is not active. Kindly contact to your branch executive.') unless user.active
   end
 end

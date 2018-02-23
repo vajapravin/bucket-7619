@@ -9,6 +9,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
+require_relative '../app/middlewares/devise_params'
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
@@ -41,5 +42,7 @@ module AllyApi
 
     config.eager_load_paths << Rails.root.join('lib')
     config.eager_load_paths << Rails.root.join('app/exceptions')
+
+    # config.middleware.use OverrideDeviseParams, "*"
   end
 end

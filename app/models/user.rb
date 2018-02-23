@@ -32,6 +32,7 @@
 #  profile_id             :integer
 #  amount                 :float            default(0.0)
 #  ancestry               :string
+#  active                 :boolean          default(FALSE)
 #
 
 class User < ApplicationRecord

@@ -16,4 +16,8 @@ class Profile < ApplicationRecord
   belongs_to :address
 
   accepts_nested_attributes_for :address
+
+  def fullname
+    [first_name, last_name].join(" ")
+  end
 end

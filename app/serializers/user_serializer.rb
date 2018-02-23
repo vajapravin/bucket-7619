@@ -32,10 +32,15 @@
 #  profile_id             :integer
 #  amount                 :float            default(0.0)
 #  ancestry               :string
+#  active                 :boolean          default(FALSE)
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :identifier, :amount
+  attributes :email, :identifier, :amount, :activities_count, :active
   belongs_to :profile
   has_many :roles
+
+  def activities_count
+    object.activities.count
+  end
 end

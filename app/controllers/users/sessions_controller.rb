@@ -1,8 +1,4 @@
 class Users::SessionsController < Devise::SessionsController
-  def new
-    head 405
-  end
-
   def create
     self.resource = warden.authenticate!(auth_options)
 
@@ -16,9 +12,5 @@ class Users::SessionsController < Devise::SessionsController
       error = { error: I18n.t('devise.failure.verify_email') }
       respond_with error, status: 401, location: after_sign_out_path_for(resource)
     end
-  end
-
-  def destroy
-    head 405
   end
 end
